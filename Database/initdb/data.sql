@@ -1,0 +1,17 @@
+USE employee_db;
+
+INSERT INTO `employees` (`id`,`last_name`,`first_name`,`email`, `department`, `salary`, `is_active`) VALUES (1,'Doe','John','john.doe@foo.com', 'HR', 55000.00, true);
+INSERT INTO `employees` (`id`,`last_name`,`first_name`,`email`, `department`, `salary`,`is_active`) VALUES (2,'Public','Mary','mary.public@foo.com', 'Engineering', 75000.00, true);
+INSERT INTO `employees` (`id`,`last_name`,`first_name`,`email`, `department`, `salary`, `is_active`) VALUES (3,'Queue','Susan','susan.queue@foo.com', 'Legal', 130000.00, true);
+
+INSERT INTO `employees` (`id`,`last_name`,`first_name`,`email`, `department`, `salary`, `is_active`) VALUES (4,'Williams','David','david.williams@foo.com', 'HR', 120000.00, true);
+INSERT INTO `employees` (`id`,`last_name`,`first_name`,`email`, `department`, `salary`, `is_active`) VALUES (5,'Johnson','Lisa','lisa.johnson@foo.com', 'Engineering', 50000.00, true);
+INSERT INTO `employees` (`id`,`last_name`,`first_name`,`email`, `department`, `salary`, `is_active`) VALUES (6,'Smith','Paul','paul.smith@foo.com', 'Legal', 100000.00, true);
+
+INSERT INTO `employees` (`id`,`last_name`,`first_name`,`email`, `department`, `salary`, `is_active`) VALUES (7,'Adams','Carl','carl.adams@foo.com', 'HR', 50000.00, true);
+INSERT INTO `employees` (`id`,`last_name`,`first_name`,`email`, `department`, `salary`, `is_active`) VALUES (8,'Brown','Bill','bill.brown@foo.com', 'Engineering', 50000.00, true);
+INSERT INTO `employees` (`id`,`last_name`,`first_name`,`email`, `department`, `salary`, `is_active`) VALUES (9,'Thomas','Susan','susan.thomas@foo.com', 'Legal', 80000.00, true);
+
+INSERT INTO `employees` (`id`,`last_name`,`first_name`,`email`, `department`, `salary`, `is_active`) VALUES (10,'Davis','John','john.davis@foo.com', 'HR', 45000.00, true);
+INSERT INTO `employees` (`id`,`last_name`,`first_name`,`email`, `department`, `salary`, `is_active`) VALUES (11,'Fowler','Mary','mary.fowler@foo.com', 'Engineering', 65000.00, true);
+INSERT INTO `employees` (`id`,`last_name`,`first_name`,`email`, `department`, `salary`, `is_active`) VALUES (12,'Waters','David','david.waters@foo.com', 'Legal', 90000.00, true);
