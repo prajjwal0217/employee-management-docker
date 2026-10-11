@@ -1,0 +1,62 @@
+services:
+
+  employee-db:
+    build:
+      dockerfile: Dockerfile
+    
+    image: employee-db:1.1
+    container_name: employee-db
+    
+    volumes:
+      - employee-db-data:/var/lib/mysql
+
+    environment:
+      MYSQL_DATABASE: employee_db
+      MYSQL_USER: dev
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/db_root_password
+      MYSQL_PASSWORD: /run/secrets/db_password
+    
+    secrets:
+      - db_root_password
+      - db_password
+
+  employee-app:
+    build:
+      dockerfile: ../App/Dockerfile
+    
+    image: empapp:1.1
+    container_name: employee-app
+    
+    environment:
+      DB_URL: jdbc:mysql://employee-db:3306/employee_db
+      DB_USERNAME: root
+
+ #    DB_PASSWORD variable is read from the environment file, which is mounted as a secret in the container. The application can read the password from the environment variable and use it to connect to the database.   
+    env_file:
+      - ./environment.env
+
+    secrets:
+      - app_db_password
+  
+  employee-web:
+    build:
+      dockerfile: ../Web/Dockerfile
+    
+    image: empweb:1.1
+    container_name: employee-web
+
+    ports:
+      - "80:80"
+      - "443:443"
+      
+volumes:
+  employee-db-data:
+    driver: local
+
+secrets:
+  db_root_password:
+    file: ./secrets/db_root_password.txt
+  db_password:
+    file: ./secrets/db_password.txt
+  app_db_password:
+    file: ./secrets/app_db_password.txt

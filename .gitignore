@@ -1,0 +1,16 @@
+# Secrets
+secrets/*.txt
+
+# Application jar files
+*.jar
+
+# Angular build output
+employee-web
+
+# SSL certificates
+*.crt
+*.csr
+*.key
+*.cnf   
+
+*.env
