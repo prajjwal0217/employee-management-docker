@@ -13,4 +13,4 @@ CREATE TABLE `employees` (
   `salary` DECIMAL(10,2) DEFAULT NULL,
   `is_active` boolean DEFAULT true,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;   
